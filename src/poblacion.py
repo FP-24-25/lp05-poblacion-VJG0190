@@ -22,3 +22,13 @@ def calcula_paises(poblaciones):
         paises.append(pais)
     return sorted(paises)     
 
+
+
+def filtra_por_pais(poblaciones,nombre_o_codigo):
+    poblaciones = lee_poblaciones(poblaciones)
+    datos_pais=list()
+    for f in poblaciones:
+        if f[0] == nombre_o_codigo or f[1] == nombre_o_codigo:
+            datos_pais.append([f[2],f[3]])
+    return datos_pais
+
